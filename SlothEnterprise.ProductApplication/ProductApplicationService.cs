@@ -28,7 +28,7 @@ namespace SlothEnterprise.ProductApplication
 
             IApplicationHandler appropriateApplicationHandler = _applicationHandlers.FirstOrDefault(x => x.CanHandle(application.Product));
             //TODO: Based on business requirements we can also use SingleOrDefault,
-            //if we want to throw exception when more than 1 handler can submit application - it may mean an incorrect request
+            //if we want to throw exception when more than 1 handler can submit application - it may mean an incorrect request or some other issue!
 
             if (appropriateApplicationHandler == null)
             {
