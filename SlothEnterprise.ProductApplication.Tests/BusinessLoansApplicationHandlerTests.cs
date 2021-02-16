@@ -41,7 +41,7 @@ namespace SlothEnterprise.ProductApplication.Tests
         }
 
         //TODO: More tests that check other cases like
-        //- value of result when ApplicationResult has success but ApplicationId is NULL
+        //- value of result when ApplicationResult has Success set to true but ApplicationId is NULL
         //- thrown exception 'Can not create CompanyDataRequest' when CompanyData is null
     }
 }

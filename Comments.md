@@ -1,5 +1,5 @@
 1. It does not meet Open/Closed principle - that's the biggest propblem.
-In case of new products we will have to each time modify ProductApplicationService - by adding new IF statement.
+In case of new products, we will have to each time modify ProductApplicationService - by adding new IF statement.
 
 1.a. Extending this class with new product microservices also requires modification to unit tests - to keep tests still working.
 
@@ -26,11 +26,12 @@ There are other issues like:
 * Returning just integer from the service does not bring much information.
 It would be good to return IApplicationResult (unfortunately one of microservices already returns integer).
 Thanks to that, when this service will be potentially used by some client (via WebAPI endpoint),
-we can return appropriate status code and list of errors to client.
+we can return appropriate HTTP status code and list of errors to client.
 
 * Personally I wouldn't call microservice if CompanyNumber is 0 (it depends on business requirements)
 
-* I prefer to have calculation of applicationId based on application result divided into if statements instead of one-liner - I did it in my solution
+* I prefer to have calculation of applicationId (that's based on application result) divided into IF statements (instead of one-liner).
+I did it in my solution - I feel it improves readability :)
 
-* Products contain a lot of properties with type decimal.
-Maybe type 'double' will be enough but it depends on business requirements - so it's not a concern for this moment
+* Products classes contain a lot of properties with type 'decimal'.
+Maybe type 'double' will be enough but it depends on business requirements - so I am not marking it as a concern for this moment
