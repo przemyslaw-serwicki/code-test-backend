@@ -67,5 +67,9 @@ namespace SlothEnterprise.ProductApplication.Tests
 
             _businessLoansApplicationHandlerMock.Verify(x => x.Handle(_sellerApplicationMock.Object), Times.Once());
         }
+
+        //TODO: We can also write other tests like
+        //- to catch if exception has been thrown when no handler was matched to submit application
+        //- when request contains NULL product
     }
 }

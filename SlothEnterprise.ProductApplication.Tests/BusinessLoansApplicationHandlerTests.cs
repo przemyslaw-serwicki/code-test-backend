@@ -39,5 +39,9 @@ namespace SlothEnterprise.ProductApplication.Tests
             var result = _sut.Handle(_sellerApplicationMock.Object);
             result.Should().Be(1);
         }
+
+        //TODO: More tests that check other cases like
+        //- value of result when ApplicationResult has success but ApplicationId is NULL
+        //- thrown exception 'Can not create CompanyDataRequest' when CompanyData is null
     }
 }
